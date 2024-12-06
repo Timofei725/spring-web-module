@@ -1,13 +1,12 @@
 package ru.edu.springweb;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import org.apache.catalina.LifecycleException;
+import ru.edu.springweb.server.ServerInitializer;
+import ru.edu.springweb.server.TomcatInitializer;
+
+public class App {
+    public static void main(String[] args) throws LifecycleException {
+        ServerInitializer tomcatInitializer = new TomcatInitializer();
+        tomcatInitializer.init();
     }
 }
